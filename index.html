@@ -8,25 +8,70 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Coding Quiz Fun Time</title>
   </head>
   <body>
-    <div class="h-100 bg-dark align-items-center">
+    <header class="navbar">
+      <a class="navbar-brand" href="#">High Scores</a>
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h4 id="countdown" class="display-6 text-muted">Timer:30</h4>
+    </header>
+    <div class="h-100% bg-secondary align-items-center">
       <section class="row w-100 justify-content-center">
         <div class="col-10 col-md-6 col-lg-5">
           <h1 class="display-3 text-center text-white">
             Coding Quiz Fun Time!
           </h1>
           <div class="bg-white rounded p-3 my-3">
-            <h2>
+            <h2 id="question" class="display-6 display-none p-3 mb-3 hide">
               Cheese on toast cow swiss. Boursin babybel cut the cheese rubber
               cheese ricotta melted cheese parmesan bavarian bergkase. Say
               cheese cheese strings cheese and biscuits chalk and cheese
               halloumi stilton everyone loves say cheese.
             </h2>
+            <div id="answer" class="text-center mb-3">
+              <button id="ans1" class="my-1 btn btn-primary w-50 hide">
+                question option 1
+              </button>
+
+              <button id="ans2" class="my-1 btn btn-primary w-50 hide">
+                question option 2
+              </button>
+
+              <button id="ans3" class="my-1 btn btn-primary w-50 hide">
+                question option 3
+              </button>
+
+              <button id="ans4" class="my-1 btn btn-primary w-50 hide">
+                question option 4
+              </button>
+            </div>
+
+            <button id="start" class="btn btn-success m-2 w-100">
+              Start Quiz
+            </button>
           </div>
         </div>
       </section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
+
+
+      <!-- from bootcamp docs
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      > -->
