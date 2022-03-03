@@ -7,6 +7,8 @@ var choices3El = document.getElementById("ans3");
 var choices4El = document.getElementById("ans4");
 var startButton = document.getElementById("start");
 var welcomeTitle = document.getElementById("welcome-title");
+var timerVal;
+var secondsRemaining = 5;
 
 var questionArray = [
   {
@@ -25,10 +27,15 @@ var questionArray = [
 startButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
-  //   start & display timer
+  timerEl.innerText = secondsRemaining;
+  timerVal = setInterval(function () {
+    secondsRemaining--;
+    timerEl.innerText = secondsRemaining;
+  }, 1000);
   welcomeTitle.classList.add("hide");
   startButton.classList.add("hide");
   questionEl.classList.remove("hide");
   answerEl.classList.remove("hide");
+  timerEl.classList.remove("hide");
   //  display question 1
 }
