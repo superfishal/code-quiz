@@ -6,6 +6,7 @@ High scores are stored locally, can be viewed anytime and initials are entered a
 
 # Links
 Deployed App - https://superfishal.github.io/code-quiz/
+
 Repository - https://github.com/superfishal/code-quiz
 
 # Criteria
