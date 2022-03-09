@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap and CSS links -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -12,13 +13,27 @@
     <title>Coding Quiz Fun Time</title>
   </head>
   <body>
+    <!-- modal high score pop out -->
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>High Scores</h2>
+        <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <!-- high scores will display high->low  -->
+        </div>
+      </div>
+    </div>
     <header class="navbar">
-      <a class="navbar-brand" href="#">High Scores</a>
-
+      <!-- link to high score modal -->
+      <a class="navbar-brand" id="scores" href="#">High Scores</a>
         <span class="navbar-toggler-icon"></span>
       </button>
-      <h4 id="countdown" class="display-6 text-muted hide">count:down</h4>
+      <!-- countdown timer -->
+      <h4 id="countdown" class="display-6 text-muted hide"></h4>
     </header>
+    <!-- main body -->
     <div class="h-100% bg-secondary align-items-center">
       <section class="row w-100 justify-content-center">
         <div class="col-10 col-md-6 col-lg-5">
@@ -26,34 +41,28 @@
             Coding Quiz Fun Time!
           </h1>
           <div class="text-center bg-white rounded p-3 my-3">
-            
+            <!-- hidden questions+answer elements -->
             <h2 id="question" class="display-6 text-center display-none p-3 mb-3 hide"></h2>
             <div id="answer" class="d-flex flex-column align-items-center text-center mb-3 hide"></div>
             <h3 id="answer-select" class="display-3 feedback hide"></h3>
+            <!-- starts timer and quiz function -->
             <button id="start" class="btn btn-success m-2 w-100">
               Start Quiz
             </button>
-            <input type="text" id="initials" />
-            <button id="submit" class="btn btn-success">Submit Score</button>
+            <!-- score submission box displayed after quiz end -->
+            <div id="final-score" class="hide">
+            <input type="text" id="initials" placeholder="Initials" />
+            <!-- click submit triggers savescore function to localStorage -->
+            <button id="submit" onclick="saveScore()" class="btn btn-success">Enter Initials</button>
+            </div>
           </div>
         </div>
       </section>
     </div>
+    <!-- javascript links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
-
-
-      <!-- from bootcamp docs
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      > -->
